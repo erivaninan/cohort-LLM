@@ -1,0 +1,41 @@
+# config/cohort.toml
+
+[[patients]]
+id = 1
+profile = "Male, 78, lives alone in a mountainous area. Limited pharmacy access. Low tech literacy."
+
+[[patients]]
+id = 2
+profile = "Female, 65, rural area. Depends on children for transportation. High anxiety levels."
+
+[[patients]]
+id = 3
+profile = "Male, 34, corporate executive, frequent traveler. Forgets medication due to jet-lag."
+
+[[patients]]
+id = 4
+profile = "Female, 42, nurse (night shifts). Highly irregular daily rhythm."
+
+[[patients]]
+id = 5
+profile = "Male, 50, precarious financial situation. Prioritizes food budget over medication costs."
+
+[[patients]]
+id = 6
+profile = "Female, 29, international student. Language barrier regarding dosage instructions."
+
+[[patients]]
+id = 7
+profile = "Male, 60, retired, mild depression. Significant lack of motivation."
+
+[[patients]]
+id = 8
+profile = "Female, 55, 'optimist' profile. Discontinues treatment as soon as symptoms improve."
+
+[[patients]]
+id = 9
+profile = "Male, 72, married. Spouse strictly manages the pillbox (Control Group)."
+
+[[patients]]
+id = 10
+profile = "Female, 38, tech-savvy. Uses reminder apps for strict adherence (Control Group)."
