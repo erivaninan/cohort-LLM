@@ -1,2 +1,8 @@
 # private
 config/api.toml
+
+# voluminous files
+output/*.csv
+__pycache__/
+.ipynb_checkpoints/
+.env
