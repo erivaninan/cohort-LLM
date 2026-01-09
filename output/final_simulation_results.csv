@@ -1,0 +1,61 @@
+patient_id,month,observance,symptomes,journal
+1,1,95,1,Patient reported feeling well and stable with no significant changes.
+2,1,85,2,Patient reports feeling well and adhering to medication schedule despite transportation challenges.
+3,1,70,2,"Patient reports forgetting medication once due to travel, no significant symptoms observed."
+4,1,65,3,"Normal conditions, slight fatigue due to irregular sleep."
+5,1,70,3,Patient reports occasionally skipping medication doses due to financial constraints affecting food budget.
+6,1,90,0,"Patient is adjusting well, minor communication challenges regarding dosage."
+7,1,50,4,Patient reports persistent lack of motivation despite normal conditions.
+8,1,60,3,Patient showing improvement and adherence to treatment.
+9,1,95,1,Patient adhering to medication schedule well; spouse effectively manages pillbox.
+10,1,95,2,"Everything is going as expected with reminders, feeling good."
+1,2,95,1,"Patient maintained good health this month, adhering to his medication schedule and reporting no unusual symptoms."
+2,2,85,0,Patient maintained regular check-ups despite transportation challenges and anxiety.
+3,2,60,2,Patient reports occasional missed medication due to travel schedule.
+4,2,65,3,Patient reports fatigue due to irregular sleep schedule from night shifts.
+5,2,60,3,"Patient prioritized food over medication this month, stable condition."
+6,2,75,3,Patient requires additional support due to language barrier affecting medication adherence; dosage instructions should be visually reinforced.
+7,2,65,3,"Patient reported mild lack of motivation, normal for the season."
+8,2,60,3,"Patient felt better and showed signs of treatment fatigue, but conditions are stable."
+9,2,95,0,"Patient adhering to medication schedule, no adverse symptoms reported."
+10,2,95,2,Patient reports consistent adherence and minimal symptoms.
+1,3,95,7,"Drug shortage poses a significant risk for this patient due to his age, isolation, and limited access to medication alternatives."
+2,3,90,7,"Patient expresses extreme worry about obtaining necessary medication due to shortage, feels isolated and helpless."
+3,3,65,3,"Patient reports difficulty obtaining medication due to supply chain issues, exacerbating jet-lag related forgetfulness."
+4,3,75,6,Disrupted medication schedule due to drug shortage exacerbates fatigue and sleep issues.
+5,3,30,6,Patient expresses concern about affording alternative medications due to drug shortage and limited budget.
+6,3,65,3,Patient expressed concern over medication access due to supply chain issues and language barrier.
+7,3,65,4,Patient's motivation is further impacted by medication uncertainty; depression symptoms appear slightly elevated.
+8,3,20,3,"Patient, exhibiting an optimist profile, may discontinue treatment due to perceived improvement during the drug shortage."
+9,3,85,2,Spouse reports being extra cautious about medication adherence due to ongoing drug shortage.
+10,3,20,0,"Due to the drug shortage, the patient experienced increased anxiety about potential withdrawal symptoms despite being in the control group."
+1,4,95,1,"Patient maintains good health and independence, adapting well to limited resources in his remote location."
+2,4,70,0,"Patient maintained consistent check-up adherence, but high anxiety necessitates empathetic support."
+3,4,70,2,"Patient reported forgetting medication due to travel, but otherwise stable."
+4,4,65,3,"Patient reports fatigue due to irregular sleep schedule, but no acute symptoms observed."
+5,4,30,3,Patient continues to prioritize food over medication due to financial constraints; adherence is a concern.
+6,4,75,2,Patient continues medication with minor dosage concerns due to language barrier; dosage support needed.
+7,4,65,3,"Patient continues to struggle with motivation, but reports a slight increase in daily activity."
+8,4,60,3,"Patient reports feeling significantly better and expresses a desire to reduce medication dosage, despite potential long-term benefits. Continue to monitor."
+9,4,95,2,Patient continues to adhere to medication schedule as managed by spouse; reports no significant changes in health.
+10,4,95,2,"Adherence strong, normal month."
+1,5,90,1,"Stable health, continue current routine."
+2,5,75,3,Routine check-up completed; transportation a barrier for future appointments.
+3,5,65,2,Patient reported forgetting medication due to travel schedule.
+4,5,65,3,Patient reports fatigue and mild sleep disturbances due to irregular work schedule.
+5,5,50,3,"Patient reports difficulty affording medication due to financial constraints, impacting adherence."
+6,5,75,2,Patient is managing medication but experiencing some confusion regarding dosage instructions due to language barrier.
+7,5,65,4,Patient reports continued lack of motivation despite stable mood.
+8,5,30,3,Patient reported feeling significantly better and expressed a desire to reduce medication dosage.
+9,5,95,1,Patient adherence is high due to spousal oversight; reports no adverse symptoms.
+10,5,95,2,"Maintained routine, no issues reported."
+1,6,95,1,Patient maintained good health status.
+2,6,75,3,"Stable condition reported, transportation a recurring concern."
+3,6,65,3,"Patient reported forgetting medication due to travel, no significant symptoms observed."
+4,6,65,3,Patient reports fatigue due to irregular sleep schedule as a night shift nurse.
+5,6,60,3,Patient reports occasional medication skipping due to financial constraints.
+6,6,75,2,Patient experiencing minor difficulties adhering to dosage due to language barrier; recommend translated instructions.
+7,6,65,4,"Patient shows some improvement, but motivation remains a concern."
+8,6,30,3,Patient reported feeling better and discontinued treatment against medical advice.
+9,6,95,1,"Patient stable, spouse managing medications effectively."
+10,6,95,2,Maintained consistent adherence to the medication schedule.
