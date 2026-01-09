@@ -1,4 +1,4 @@
-#load.py
+#cohort_LLM/src/agentRWE/load.py
 
 import tomllib
 import google.generativeai as genai
@@ -10,7 +10,7 @@ def load_api(config_path="config/api.toml"):
     """
     Loads the Gemini API key from a toml file and configures the GenerativeAI library.
     """
-    config_path = os.path.join(ROOT_DIR, "config", "api.toml")
+    config_path = os.path.join(ROOT_DIR, "../../config", "api.toml")
     try:
         with open(config_path, "rb") as f:
             config_data = tomllib.load(f)
@@ -25,7 +25,7 @@ def load_cohort(config_path="config/cohort.toml"):
     Reads the patient cohort from a toml file.
     Returns: A list of dictionaries, where each dictionary is a patient profile.
     """
-    config_path = os.path.join(ROOT_DIR, "config", "cohort.toml")
+    config_path = os.path.join(ROOT_DIR, "../../config", "cohort.toml")
     try:
         with open(config_path, "rb") as f:
             config_data = tomllib.load(f)
@@ -45,7 +45,7 @@ def load_simu_params(config_path="config/simulation.toml"):
     """
     Reads study simulation parameters (duration, shock event) from toml.
     """
-    config_path = os.path.join(ROOT_DIR, "config", "simulation.toml")
+    config_path = os.path.join(ROOT_DIR, "../../config", "simulation.toml")
     try:
         with open(config_path, "rb") as f:
             config_data = tomllib.load(f)
