@@ -1,0 +1,6 @@
+#cohort_LLM/config/simulation.toml
+
+[params]
+duration_months = 6
+shock_month = 3
+shock_event = "DRUG SHORTAGE (Supply chain interruption)"

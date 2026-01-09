@@ -1,4 +1,4 @@
-# config/cohort.toml
+#cohort_LLM/config/cohort.toml
 
 [[patients]]
 id = 1
