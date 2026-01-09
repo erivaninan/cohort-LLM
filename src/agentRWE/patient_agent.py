@@ -1,54 +1,51 @@
 #cohort_LLM/src/agentRWE/patient_agent.py
+# Defines autonomous agent behavior using LLM memory
+# and specific patient profiles to simulate longitudinal health journeys.
 
-import google.generativeai as genai
-from google.generativeai.types import generation_types
 import json
+from google import genai
 from src.agentRWE.utils import ensure_dict, validate_scores, safe_generate_content
 
+
 class PatientAgent:
-    def __init__(self, config):
-        self.id = config["id"]
-        self.profile = config["profile"]
-        self.history = []
-        self.model = genai.GenerativeModel('models/gemini-2.0-flash')
+    def __init__(self, client, config):
+        self.client = client
+        self.id = config.get('id', 0)
+        self.profile = config.get('profile', "Unknown")
+        self.model = "gemini-2.0-flash"
 
     def react_to_month(self, month, event):
-        # 1. Context Construction
-        context = ""
-        if self.history:
-            last = self.history[-1]
-            context = f"Last month, your treatment adherence was {last['observance']}%."
+        prompt = (
+            f"Patient profile: {self.profile}\n"
+            f"Month: {month}\n"
+            f"Event: {event}\n\n"
+            "Return only a json object: : 'observance' (0-100), 'symptomes' (1-10), 'journal' (short sentence)."
+        )
 
-        # 2. Prompt Definition
-        prompt = f"""
-        You are simulating a real patient: {self.profile}
-        History: {context}
-        Current time: Month {month}
-        Event: {event}
+        try:
+            response = self.client.models.generate_content(
+                model=self.model,
+                contents=prompt,
+                config={'response_mime_type': 'application/json'}
+            )
 
-        Return ONLY a JSON object:
-        {{
-            "observance": (0-100),
-            "symptomes": (1-10),
-            "journal": (one short sentence in English)
-        }}
-        """
+            # initial parsing
+            data = json.loads(response.text)
 
-        # 3. Safe API Call
-        config = generation_types.GenerationConfig(response_mime_type="application/json")
-        response = safe_generate_content(self.model, prompt, config)
+            # if model has returned a list, extract the first dict
+            if isinstance(data, list) and len(data) > 0:
+                data = data[0]
 
-        # 4. Data Processing & Fallback
-        if response:
-            data = ensure_dict(json.loads(response.text))
-        else:
-            data = {"observance": 0, "symptomes": 5, "journal": "API disconnected."}
+            # if it is still not a dict, create an empty dict
+            if not isinstance(data, dict):
+                data = {}
 
-        # 5. Validation & History
-        data = validate_scores(data, "observance", 0, 100)
-        data = validate_scores(data, "symptomes", 1, 10)
-        data.update({"month": month, "patient_id": self.id})
-        self.history.append(data)
+            return {
+                "observance": int(data.get("observance", 0)),
+                "symptomes": int(data.get("symptomes", 0)),
+                "journal": str(data.get("journal", "No comment."))
+            }
 
-        print(f"Agent {self.id} | Month {month} | Adherence: {data['observance']}%")
-        return data
+        except Exception as e:
+            print(f"Erreur Patient {self.id}: {e}")
+            return {"observance": 0, "symptomes": 0, "journal": f"Erreur: {str(e)[:30]}"}

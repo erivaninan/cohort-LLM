@@ -1,4 +1,6 @@
 #cohort_LLM/src/agentRWE/utils.py
+# Technical sanitization layer providing resilient API calling logic
+# and data validation for LLM-generated outputs.
 
 from google.api_core import exceptions
 import time

@@ -1,24 +1,32 @@
 #cohort_LLM/src/agentRWE/load.py
+# Utility module dedicated to securely loading API credentials
+# and external configuration files.
 
 import tomllib
-import google.generativeai as genai
+from google import genai
+import pandas as pd
 import os
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-def load_api(config_path="config/api.toml"):
+def load_api(config_name="api.toml"):
     """
-    Loads the Gemini API key from a toml file and configures the GenerativeAI library.
+    Loads the Gemini API key from a toml file and initializes the GenAI Client.
     """
-    config_path = os.path.join(ROOT_DIR, "../../config", "api.toml")
+    config_path = os.path.join(BASE_DIR, "config", config_name)
     try:
         with open(config_path, "rb") as f:
             config_data = tomllib.load(f)
-        genai.configure(api_key=config_data["api"]["gemini_key"])
-        return True
+
+        api_key = config_data.get("api", {}).get("gemini_key")
+
+        client = genai.Client(api_key=api_key)
+        return client
+
     except Exception as e:
-        print(f"API Configuration failed: {e}")
-        return False
+        print(f"API configuration failed: {e}")
+        return None
 
 def load_cohort(config_path="config/cohort.toml"):
     """
@@ -53,4 +61,10 @@ def load_simu_params(config_path="config/simulation.toml"):
     except Exception as e:
         print(f"Error loading simulation params: {e}")
         return {}
+
+def load_simu_results(filename="final_simulation_results.csv"):
+    """Loads simulation results from the output folder into a DataFrame."""
+    base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    path = os.path.join(base_dir, "output", filename)
+    return pd.read_csv(path)
 
