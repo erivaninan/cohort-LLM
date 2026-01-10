@@ -1,7 +1,7 @@
 ## 🧪 AgentRWE: LLM-Powered Real-World Evidence Simulation
 
 This diagram illustrates the end-to-end (target) architecture of the AgentRWE platform:
-<img width="1024" height="1024" alt="cohort_LLM" src="https://github.com/user-attachments/assets/c294f9ca-f026-4355-808d-07452e53264a" />
+<img width="750" height="750" alt="cohort_LLM" src="https://github.com/user-attachments/assets/c294f9ca-f026-4355-808d-07452e53264a" />
 
 ### 📌 Project Overview
 
