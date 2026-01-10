@@ -1,16 +1,23 @@
-## 🧪 AgentRWE: LLM-Powered Real-World Evidence Simulation
+##  [AgentRWE] LLM-Powered Real-World Evidence Simulation
 
-### 📌 Project Overview
+### Project Overview
 
-**AgentRWE** is a behavioral simulation platform designed to model patient journeys in chronic disease management. Using **Large Language Models (LLMs)** as autonomous agents, the system simulates how a cohort of patients reacts to real-world events, such as drug supply chain disruptions or side-effect appearances.
+<hr>
+
+**AgentRWE** is a behavioral simulation platform designed to model patient journeys in chronic disease management. 
+
+Using **Large Language Models (LLMs)** as autonomous agents, the system simulates how a cohort of patients reacts to real-world events, such as drug supply chain disruptions or side-effect appearances.
 
 Unlike traditional static simulations, AgentRWE leverages the reasoning capabilities of **Gemini 2.0 Flash** to generate qualitative "patient journals" and quantitative metrics (adherence and symptom levels), providing a bridge between clinical data and behavioral psychology.
+
 <p align="center">
   <a href="https://github.com/user-attachments/assets/c294f9ca-f026-4355-808d-07452e53264a">
-    <img src="https://github.com/user-attachments/assets/c294f9ca-f026-4355-808d-07452e53264a" alt="AgentRWE Architecture" width="750">
+    <img src="https://github.com/user-attachments/assets/c294f9ca-f026-4355-808d-07452e53264a" alt="AgentRWE Architecture" width="600">
   </a>
 </p>
-### 🤖 The Core Engine: LLM as a Patient Agent
+<hr>
+
+### The Core Engine: LLM as a Patient Agent 🤖
 
 At the heart of this project is the `PatientAgent` class. Each patient is not just a row in a database, but an **autonomous agent** with:
 
@@ -18,7 +25,7 @@ At the heart of this project is the `PatientAgent` class. Each patient is not ju
 * **Cognitive Continuity:** The agent processes monthly events and decides its adherence level based on its "mental state."
 * **Qualitative Output:** The LLM generates short journal entries explaining *why* the patient behaved in a certain way, providing context that numbers alone cannot capture.
 
-### ⚡ The Power of Causal Reasoning
+### The Power of Causal Reasoning
 
 One of the main objectives of AgentRWE is to move beyond mere correlation to explore **Causal Inference** in healthcare:
 
@@ -26,7 +33,16 @@ One of the main objectives of AgentRWE is to move beyond mere correlation to exp
 * **Understanding the "Why" (Mechanisms):** Traditional RWD (Real-World Data) often shows a drop in adherence without explanation. By using LLM agents, we can identify the **causal pathway**: *Shortage -> Anxiety -> Intentional Non-Adherence -> Symptom Relapse*.
 * **Heterogeneous Treatment Effects:** We can observe how the same cause (the shock) produces different effects across the cohort, helping researchers understand which patient profiles are most "causally vulnerable" to specific risks.
 
-### 🛠️ Tech Stack
+<hr>
+
+#### Tech Stack
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.11+-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white" alt="Streamlit">
+  <img src="https://img.shields.io/badge/Gemini_2.0-8E75B2?style=for-the-badge&logo=google-gemini&logoColor=white" alt="Gemini">
+  <img src="https://img.shields.io/badge/uv-installed-purple?style=for-the-badge" alt="uv">
+</p>
 
 * **Engine:** Python 3.x
 * **LLM API:** Google Gemini 2.0 Flash (via `google-genai`)
@@ -34,18 +50,21 @@ One of the main objectives of AgentRWE is to move beyond mere correlation to exp
 * **Data Visualization:** Plotly (Dynamic charts & individual trajectories)
 * **Data Handling:** Pandas
 
-## 🚀 How to Run
+## How to Run
 
 #### 1. Locally
 
 1. Clone the repo: `git clone https://github.com/erivaninan/cohort-LLM.git`
-2. Install dependencies: `pip install -r requirements.txt`
-3. Set up your `config/api.toml` with your Gemini API Key.
+2. Install dependencies: `pip install -r requirements.txt` (or use `uv sync` command for a faster, reproducible setup).
+3. Set up your `config/api.toml` with your own Gemini API Key.
 4. Run the app: `streamlit run app.py`
 
 #### 2. On the Web
 
-Access the live dashboard here: [AgentRWE Live](https://cohort-llm.streamlit.app/)
+Access the live dashboard here: [🧪 AgentRWE Live](https://cohort-llm.streamlit.app/)
+
+--------
+
 
 ### 📈 Future Roadmap
 
