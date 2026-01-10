@@ -4,6 +4,8 @@
   <img src="https://img.shields.io/badge/Status-Work_In_Progress-orange?style=flat-square&logo=git" alt="Status">
 </p>
 
+Access the live dashboard here: [🧪 AgentRWE Live](https://cohort-llm.streamlit.app/)
+
 ### Project Overview
 
 <hr>
@@ -14,11 +16,13 @@ Using **Large Language Models (LLMs)** as autonomous agents, the system simulate
 
 Unlike traditional static simulations, AgentRWE leverages the reasoning capabilities of **Gemini 2.0 Flash** to generate qualitative "patient journals" and quantitative metrics (adherence and symptom levels), providing a bridge between clinical data and behavioral psychology.
 
-<p align="center">
-  <a href="https://github.com/user-attachments/assets/c294f9ca-f026-4355-808d-07452e53264a">
-    <img src="https://github.com/user-attachments/assets/c294f9ca-f026-4355-808d-07452e53264a" alt="AgentRWE Architecture" width="600">
+<div align="center">
+  <a href="https://github.com/user-attachments/assets/c83927fb-04de-419e-939a-18ea5ebd902c">
+    <img src="https://github.com/user-attachments/assets/c83927fb-04de-419e-939a-18ea5ebd902c" alt="AgentRWE Architecture" width="600">
   </a>
-</p>
+  <br>
+  <p><em>AgentRWE system architecture</em></p>
+</div>
 <hr>
 
 ### The Core Engine: LLM as a Patient Agent 🤖
