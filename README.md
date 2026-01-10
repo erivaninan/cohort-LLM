@@ -5,13 +5,11 @@
 **AgentRWE** is a behavioral simulation platform designed to model patient journeys in chronic disease management. Using **Large Language Models (LLMs)** as autonomous agents, the system simulates how a cohort of patients reacts to real-world events, such as drug supply chain disruptions or side-effect appearances.
 
 Unlike traditional static simulations, AgentRWE leverages the reasoning capabilities of **Gemini 2.0 Flash** to generate qualitative "patient journals" and quantitative metrics (adherence and symptom levels), providing a bridge between clinical data and behavioral psychology.
-
 <p align="center">
   <a href="https://github.com/user-attachments/assets/c294f9ca-f026-4355-808d-07452e53264a">
     <img src="https://github.com/user-attachments/assets/c294f9ca-f026-4355-808d-07452e53264a" alt="AgentRWE Architecture" width="750">
   </a>
 </p>
-
 ### 🤖 The Core Engine: LLM as a Patient Agent
 
 At the heart of this project is the `PatientAgent` class. Each patient is not just a row in a database, but an **autonomous agent** with:
