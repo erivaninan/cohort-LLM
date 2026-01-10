@@ -1,5 +1,8 @@
 ## 🧪 AgentRWE: LLM-Powered Real-World Evidence Simulation
 
+This diagram illustrates the end-to-end (target) architecture of the AgentRWE platform:
+<img width="1024" height="1024" alt="cohort_LLM" src="https://github.com/user-attachments/assets/c294f9ca-f026-4355-808d-07452e53264a" />
+
 ### 📌 Project Overview
 
 **AgentRWE** is a behavioral simulation platform designed to model patient journeys in chronic disease management. Using **Large Language Models (LLMs)** as autonomous agents, the system simulates how a cohort of patients reacts to real-world events, such as drug supply chain disruptions or side-effect appearances.
