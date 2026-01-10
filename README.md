@@ -1,5 +1,9 @@
 ##  [AgentRWE] LLM-Powered Real-World Evidence Simulation
 
+<p>
+  <img src="https://img.shields.io/badge/Status-Work_In_Progress-orange?style=flat-square&logo=git" alt="Status">
+</p>
+
 ### Project Overview
 
 <hr>
